@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      QuizPad
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list *ngIf="gameID !== undefined">
+    <ion-item-group>
+      <ion-item no-lines>
+        <ion-avatar>
+          <img class="no-img" *ngIf="!profile.avatar" src="assets/svgs/icon.svg">
+          <img *ngIf="profile.avatar" [src]="renderPicture(profile.avatar)">
+        </ion-avatar>
+        <ion-fab class="avatar-fab" (click)="openMobileImagePicker()">
+        <button ion-fab>
+          <ion-icon name="camera"></ion-icon>
+        </button>
+      </ion-fab>
+      </ion-item>
+      <ion-item class="nickname-input">
+        <ion-label stacked>{{ 'NICKNAME' | translate }}</ion-label>
+        <ion-input type="text" minlength="3" [(ngModel)]="profile.nickname"></ion-input>
+      </ion-item>
+      <p>
+        {{ 'NICKNAME_INFO' | translate }}
+      </p>
+    </ion-item-group>
+  </ion-list>
+  <div class="qrcode-infos" *ngIf="gameID === undefined">
+    <div class="qrcode-invalid">{{ 'INVALID_QR_CODE' | translate }}</div>
+    <div class="qrcode-invalid-info">{{ 'INVALID_QR_CODE_INFO' | translate }}</div>
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="gameID !== undefined">
+  <ion-toolbar color="fulldark">
+    <ion-buttons end>
+      <button ion-button (click)="joinGame(gameID)" [disabled]="!enableJoinButton()">{{ 'JOIN' | translate }}</button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,7 @@
+{
+  "name": "QuizPad-WebController",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

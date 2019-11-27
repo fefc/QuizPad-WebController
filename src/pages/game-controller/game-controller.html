@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left *ngIf="gameControllerProv.player.avatar">
+      <button ion-button>
+        <canvas class="avatar" width="1" height="1" [style.background-image]="renderPicture(gameControllerProv.player.avatar)"></canvas>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      <span>{{ gameControllerProv.player.nickname }}</span><br>
+      <small>{{ gameControllerProv.player.stats.points }} points</small>
+    </ion-title>
+    <ion-buttons right>
+      <button ion-button>{{ gameControllerProv.player.stats.position }}</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <p class="information" *ngIf="gameControllerProv.game.state === GameState.connectionLost">{{ 'CTRL_ERROR_HOST' | translate }}</p>
+  <p class="information" *ngIf="gameControllerProv.game.state === GameState.playersJoining">{{ 'CTRL_START_SOON' | translate }}</p>
+  <p class="information" *ngIf="gameControllerProv.game.state === GameState.loading"><ion-spinner name="crescent" color="primary"></ion-spinner></p>
+  <p class="information" *ngIf="gameControllerProv.game.state === GameState.ended">{{ 'CTRL_END' | translate }}</p>
+  <p class="information" *ngIf="gameControllerProv.game.state === GameState.quickedOut">{{ 'CTRL_KICKED' | translate }}</p>
+  <div class="answers-container" *ngIf="gameControllerProv.game.state === GameState.classicQuestionDisplayed || gameControllerProv.game.state === GameState.pictureQuestionDisplayed">
+    <div *ngIf="gameControllerProv.game.state === GameState.classicQuestionDisplayed" class="answers">
+      <div class="zero" (tap)="setAnswer(0)"  [ngClass]="{'disabled': gameControllerProv.player.answer !== 0 && gameControllerProv.player.answer !== -1}"></div>
+      <div class="one" (tap)="setAnswer(1)"   [ngClass]="{'disabled': gameControllerProv.player.answer !== 1 && gameControllerProv.player.answer !== -1}"></div>
+      <div class="two" (tap)="setAnswer(2)"   [ngClass]="{'disabled': gameControllerProv.player.answer !== 2 && gameControllerProv.player.answer !== -1}"></div>
+      <div class="three" (tap)="setAnswer(3)" [ngClass]="{'disabled': gameControllerProv.player.answer !== 3 && gameControllerProv.player.answer !== -1}"></div>
+  </div>
+    <canvas *ngIf="gameControllerProv.game.state === GameState.pictureQuestionDisplayed" class="buzzer" height="1" width="1" (tap)="setAnswer(100)" [ngClass]="{'disabled': gameControllerProv.player.answer === 100}"></canvas>
+  </div>
+</ion-content>

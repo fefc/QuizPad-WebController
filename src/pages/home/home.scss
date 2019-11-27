@@ -1,0 +1,65 @@
+page-home {
+  .scroll-content {
+    //overflow-y: hidden !important;
+    padding-bottom: 0px !important; //important to API 21
+    display: flex;
+    flex-flow: column;
+  }
+
+  ion-avatar {
+    margin: 10px 0 20px 0;
+
+    img {
+      height: 128px !important;
+      width: 128px !important;
+      margin: auto;
+      border: 0.2em solid white;
+      object-fit: cover;
+    }
+
+    .no-img {
+      padding: 10px;
+    }
+  }
+
+  .avatar-fab {
+    left: 50%;
+    margin-left: 14px;
+    bottom: 14px;
+  }
+
+  p {
+      text-align: center;
+      padding: 0 40px;
+      font-size: 14px;
+      line-height: 1.5;
+  }
+
+  .nickname-input {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .qrcode-infos {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .qrcode-invalid {
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    padding: 1em;
+  }
+
+  .qrcode-invalid-info {
+    font-size: 1.0em;
+    width: 100%;
+    color: #ccc;
+    padding: 0.2em;
+  }
+}

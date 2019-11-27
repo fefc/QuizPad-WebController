@@ -1,0 +1,23 @@
+{
+  "CTRL_ERROR_HOST": "Unable to reach quiz host.",
+  "CTRL_START_SOON": "The game will start soon...",
+  "CTRL_END": "That's it, thanks for playing!",
+  "CTRL_KICKED": "You have been quicked out by the admin.",
+  "SET_ANSWER_ERROR": "Could not set answer",
+  "TRY_AGAIN": "Please try again",
+  "INVALID_QR_CODE": "Invalid QR code",
+  "INVALID_QR_CODE_INFO": "The scanned QR code is not valid, please try again with a valid QuizPad QR code.",
+  "GENERAL_ERROR": "General error",
+  "JOIN_GAME_ERROR": "Could not join game",
+  "RESIZE_AVATAR_ERROR": "Unable to resize avatar.",
+  "NICKNAME": "Nickname",
+  "NICKNAME_INFO": "Your nickname must be at least 3 characters, it will be displayed when you join a quiz.",
+  "NICKNAME_NEW": "New nickname",
+  "NICKNAME_ALREADY_USED": "Nickname already used",
+  "NICKNAME_ALREADY_USED_INFO": "Your nickname is already used by someone else, please change it just for now.",
+  "OK": "Ok",
+  "CLOSE": "Close",
+  "CANCEL": "Cancel",
+  "JOIN": "Join",
+  "JOINING": "Joining game..."
+}

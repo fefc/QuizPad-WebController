@@ -1,0 +1,23 @@
+{
+  "CTRL_ERROR_HOST": "Impossible de joindre l'hôte.",
+  "CTRL_START_SOON": "La partie va bientôt commencer...",
+  "CTRL_END": "C'est fini, merci d'avoir participé!",
+  "CTRL_KICKED": "Vous avez été viré par l'administrateur.",
+  "SET_ANSWER_ERROR": "Impossible d'envoyer la réponse",
+  "TRY_AGAIN": "Veuillez réessayer",
+  "INVALID_QR_CODE": "Code QR invalide",
+  "INVALID_QR_CODE_INFO": "Le code QR scanné n'est pas valide. Veuillez réessayer avec un code QR QuizPad valide.",
+  "GENERAL_ERROR": "Erreur générale",
+  "JOIN_GAME_ERROR": "Impossible de rejoindre le jeu",
+  "RESIZE_AVATAR_ERROR": "Impossible de redimensionner l'avatar.",
+  "NICKNAME": "Pseudo",
+  "NICKNAME_INFO": "Votre pseudo doit comporter au moins 3 caractères. Il sera affiché lorsque vous rejoindrez un quiz.",
+  "NICKNAME_NEW": "Nouveau pseudo",
+  "NICKNAME_ALREADY_USED": "Pseudo déjà utilisé",
+  "NICKNAME_ALREADY_USED_INFO": "Votre pseudo est déjà utilisé par quelqu'un d'autre, veuillez le changer juste pour cette partie.",
+  "OK": "Ok",
+  "CLOSE": "Fermer",
+  "CANCEL": "Annuler",
+  "JOIN": "Rejoindre",
+  "JOINING": "Connexion..."
+}
